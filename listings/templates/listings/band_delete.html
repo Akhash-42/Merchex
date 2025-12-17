@@ -1,0 +1,10 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+    <h1>supprimer un groupe</h1>
+    <p>Etes vous sur de vouloir supprimer le groupe {{band.name}}</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input class="btn" type="submit" value="supprimer">
+    </form>
+{% endblock %}

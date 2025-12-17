@@ -1,0 +1,12 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+    <p>Voila mes albums  </p>
+    <p>
+        <ul>
+            {% for tit in titles %}
+                    <li><a href="{% url 'list-detail' tit.id %}">{{tit.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </p>
+{% endblock %}

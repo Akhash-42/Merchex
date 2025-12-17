@@ -1,0 +1,56 @@
+* {
+    background: #090e34;
+    color: white;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+a:hover{
+    background-color: hsl(233, 70%, 24%);
+}
+.errorlist{
+    margin-bottom: -10px ;
+}
+.esp{
+    padding: 5px;
+}
+
+.btn{
+    background-color: #e033e6;
+    padding: 10px 20px;
+    border: 2px solid oklab(74.68599999999999% -0.1976 0.14727);
+    cursor: pointer;
+    margin: 10px 15px;
+    border-radius: 10px;
+
+}
+.btn:hover{
+    background-color: oklab(74.68599999999999% -0.1976 0.14727);
+}
+
+.back{
+    background-color: oklab(74.68599999999999% -0.1976 0.14727);
+    padding: 10px 20px;
+    border: 2px solid #e033e6;
+    cursor: pointer;
+    margin: 10px 15px;
+    border-radius: 10px;
+}
+.back:hover{
+    background-color: #e033e6;
+}
+
+.mam{
+    width: 50%;
+    /* list-style-position: inside; */
+    margin :auto;
+    margin-top: 50px;
+   
+}
+
+nav{
+    right: 0px;
+    padding: 5px;
+    position: absolute;
+}

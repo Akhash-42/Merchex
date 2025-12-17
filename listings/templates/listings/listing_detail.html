@@ -1,0 +1,17 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+    <p>Voila mes albums  </p>
+    <p>
+        <h1>{{list.title}}</h1>
+        <ul>
+            <li>Année : {{list.year}}</li>
+            <li>Type : {{list.get_type_display}}</li>
+            <li>En solde : {{list.sold | yesno}}</li>
+            <li>Groupes <a href="">{{list.band}}</a></li>
+        </ul>
+        <p>{{list.description}}</p>
+    </p>
+    <a class="btn" href="{% url 'list-update' list.id %}"> modifier</a> <a class="back" href="{% url 'list-delete' list.id %}"> supprimer</a>
+    <h3><a class="back" href="{% url 'list'%}">BACK</a></h3>
+{% endblock %}
