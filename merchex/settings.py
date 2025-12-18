@@ -83,21 +83,17 @@ WSGI_APPLICATION = 'merchex.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.environ["PGDATABASE"],
-#         'USER': os.environ["PGUSER"],
-#         'PASSWORD': os.environ["PGPASSWORD"],
-#         'HOST': os.environ["PGHOST"],
-#         'PORT': os.environ["PGPORT"],
-#     }
-# }
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://postgres:oUMKpKlKERDkTiqYQvEwgjfGmTexPnGm@shuttle.proxy.rlwy.net:35354/railway'
-    )
+    'default': dj_database_url.config({
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ["PGDATABASE"],
+        'USER': os.environ["PGUSER"],
+        'PASSWORD': os.environ["PGPASSWORD"],
+        'HOST': os.environ["PGHOST"],
+        'PORT': os.environ["PGPORT"],
+    })
 }
+
 
 
 # Password validation
