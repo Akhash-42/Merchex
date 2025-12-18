@@ -17,8 +17,8 @@ os.environ.setdefault("PGDATABASE", "railway")
 os.environ.setdefault("PGUSER", "postgres")
 os.environ.setdefault("PGPASSWORD", "oUMKpKlKERDkTiqYQvEwgjfGmTexPnGm")
 os.environ.setdefault("PGHOST", "postgres.railway.internal")
-os.environ.setdefault("PGPORT", "5432")
-PORT = int(os.environ.get('PORT', 5432))
+os.environ.setdefault("PGPORT", "8000")
+PORT = int(os.environ.get('PORT', 8000))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

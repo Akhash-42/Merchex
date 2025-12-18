@@ -1,1 +1,1 @@
-web: gunicorn merchex.wsgi:application --bind 0.0.0.0:5432
+web: gunicorn merchex.wsgi:application --bind 0.0.0.0:8000
