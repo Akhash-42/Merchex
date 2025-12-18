@@ -13,12 +13,12 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from pathlib import Path
 import os
 
-os.environ.setdefault("PGDATABASE", "Merchex_dev")
+os.environ.setdefault("PGDATABASE", "railway")
 os.environ.setdefault("PGUSER", "postgres")
-os.environ.setdefault("PGPASSWORD", "12345")
-os.environ.setdefault("PGHOST", "localhost")
+os.environ.setdefault("PGPASSWORD", "oUMKpKlKERDkTiqYQvEwgjfGmTexPnGm")
+os.environ.setdefault("PGHOST", "postgres.railway.internal")
 os.environ.setdefault("PGPORT", "5432")
-PORT = int(os.environ.get('PORT', 8000))
+PORT = int(os.environ.get('PORT', 5432))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
