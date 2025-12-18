@@ -1,56 +1,89 @@
+/* Amélioration globale */
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Important pour que le padding ne casse pas la largeur */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background: #090e34;
     color: white;
 }
-a{
+
+/* Liens de navigation */
+a {
     color: aliceblue;
     text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Animation douce au survol */
 }
-a:hover{
+
+a:hover {
     background-color: hsl(233, 70%, 24%);
-}
-.errorlist{
-    margin-bottom: -10px ;
-}
-.esp{
-    padding: 5px;
+    color: #e033e6; /* Petit rappel de ta couleur principale */
 }
 
-.btn{
-    background-color: #e033e6;
-    padding: 10px 20px;
-    border: 2px solid oklab(74.68599999999999% -0.1976 0.14727);
-    cursor: pointer;
-    margin: 10px 15px;
-    border-radius: 10px;
-
-}
-.btn:hover{
-    background-color: oklab(74.68599999999999% -0.1976 0.14727);
+/* Conteneur principal */
+.mam {
+    width: 60%; /* Légèrement plus large pour plus d'air */
+    max-width: 800px;
+    margin: 80px auto; /* Plus d'espace en haut */
+    padding: 20px;
+    line-height: 1.6; /* Meilleure lisibilité du texte */
 }
 
-.back{
-    background-color: oklab(74.68599999999999% -0.1976 0.14727);
-    padding: 10px 20px;
-    border: 2px solid #e033e6;
-    cursor: pointer;
-    margin: 10px 15px;
-    border-radius: 10px;
-}
-.back:hover{
-    background-color: #e033e6;
-}
-
-.mam{
-    width: 50%;
-    /* list-style-position: inside; */
-    margin :auto;
-    margin-top: 50px;
-   
-}
-
-nav{
-    right: 0px;
-    padding: 5px;
+/* Navigation */
+nav {
+    top: 20px;
+    right: 20px;
     position: absolute;
+    display: flex;
+    gap: 10px; /* Espace régulier entre les liens */
+}
+
+/* Style commun pour les boutons */
+.btn, .back {
+    display: inline-block; /* Pour que les marges fonctionnent bien */
+    padding: 12px 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin: 10px 5px; /* Aligné avec moins d'écart latéral */
+    border-radius: 8px;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+    border: 2px solid;
+}
+
+/* Bouton principal (Violet) */
+.btn {
+    background-color: #e033e6;
+    border-color: oklab(74.68599999999999% -0.1976 0.14727);
+}
+
+.btn:hover {
+    background-color: oklab(74.68599999999999% -0.1976 0.14727);
+    transform: translateY(-2px); /* Effet de soulèvement */
+    box-shadow: 0 5px 15px rgba(224, 51, 230, 0.3);
+}
+
+/* Bouton secondaire (Bleu/Gris) */
+.back {
+    background-color: oklab(74.68599999999999% -0.1976 0.14727);
+    border-color: #e033e6;
+}
+
+.back:hover {
+    background-color: #e033e6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(130, 160, 230, 0.2);
+}
+
+/* Listes d'erreurs Django */
+.errorlist {
+    list-style: none;
+    color: #ff4d4d; /* Rouge pour les erreurs */
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    padding: 0;
 }
