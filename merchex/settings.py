@@ -12,11 +12,12 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 os.environ.setdefault("PGDATABASE", "railway")
 os.environ.setdefault("PGUSER", "postgres")
 os.environ.setdefault("PGPASSWORD", "oUMKpKlKERDkTiqYQvEwgjfGmTexPnGm")
-os.environ.setdefault("PGHOST", "postgres.railway.internal")
+os.environ.setdefault("PGHOST", "postgresql://postgres:oUMKpKlKERDkTiqYQvEwgjfGmTexPnGm@shuttle.proxy.rlwy.net:35354/railway")
 os.environ.setdefault("PGPORT", "5432")
 # PORT = int(os.environ.get('PORT', ))
 
@@ -82,15 +83,20 @@ WSGI_APPLICATION = 'merchex.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ["PGDATABASE"],
+#         'USER': os.environ["PGUSER"],
+#         'PASSWORD': os.environ["PGPASSWORD"],
+#         'HOST': os.environ["PGHOST"],
+#         'PORT': os.environ["PGPORT"],
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ["PGDATABASE"],
-        'USER': os.environ["PGUSER"],
-        'PASSWORD': os.environ["PGPASSWORD"],
-        'HOST': os.environ["PGHOST"],
-        'PORT': os.environ["PGPORT"],
-    }
+    'default': dj_database_url.config(
+        default='postgresql://postgres:oUMKpKlKERDkTiqYQvEwgjfGmTexPnGm@shuttle.proxy.rlwy.net:35354/railway'
+    )
 }
 
 
