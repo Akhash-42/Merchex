@@ -14,6 +14,12 @@ from pathlib import Path
 import os
 # import dj_database_url
 
+RAILWAY_APP_URL = os.getenv('RAILWAY_PUBLIC_DOMAIN')
+
+CSRF_TRUSTED_ORIGINS = []
+if RAILWAY_APP_URL:
+    CSRF_TRUSTED_ORIGINS.append(f'https://{RAILWAY_APP_URL}')
+
 os.environ.setdefault("PGDATABASE", "railway")
 os.environ.setdefault("PGUSER", "postgres")
 os.environ.setdefault("PGPASSWORD", "oUMKpKlKERDkTiqYQvEwgjfGmTexPnGm")
